@@ -1,0 +1,10 @@
+target
+*.iml
+*.idea
+bin
+out
+/**/*.idea
+/**/*.iml
+.settings
+*.bak
+.memdump

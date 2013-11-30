@@ -1,0 +1,66 @@
+Integration tests
+
+A number of integration tests are provided these need a set of repositories to support this.
+
+By default these are:
+
+# 'Server' is a bare repository acting as the remote repository for the 2 local clones
+/temp/work/server
+
+# two clones of server
+/temp/work/local
+/temp/work/scruffy
+
+
+
+Set these up as follows:
+
+This assumes /temp/work exists
+
+#
+# Setup the remote
+
+cd /temp/work
+mkdir server
+cd server
+
+git init --bare
+
+cd ..
+
+#
+# Create local clone
+git clone server ./local
+
+cd local
+
+#
+# verify the repo
+git remote -v
+origin  C:/temp/work/server (fetch)
+origin  C:/temp/work/server (push)
+
+#
+# do stuff, add a file, and push
+
+dir > a.txt
+git add ./
+git commit -m "Added a.txt"
+
+git push --all origin
+
+#
+# create second clone
+cd ..
+git clone server ./scruffy
+
+cd scruffy
+
+#
+# leave it with pending work
+dir > b.txt
+
+
+
+
+Feel free to change and augment, but update the test manifests appropriately.

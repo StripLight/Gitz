@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+	Example manifest file for gitz. See the model for details
+-->
+
+<manifest>
+
+	<baseFolder/>
+	<description>missing server path</description>
+
+	<defaultServerPath/>
+
+	<postCommandTasks/>
+
+	<manifestEntries>
+
+		<entry>
+			<repository>local</repository>
+			<targetName>local</targetName>
+		</entry>
+	</manifestEntries>
+
+</manifest>

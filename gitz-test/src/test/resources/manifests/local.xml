@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+	Example manifest file for gitz. See the model for details
+-->
+
+<manifest>
+
+	<baseFolder>/temp/work/</baseFolder>
+	<description>Manifest to use /temp/work/local repo (which is linked to (local) remote called remote</description>
+
+	<defaultServerPath>https://github.com/</defaultServerPath>
+
+	<postCommandTasks>
+		<postCommandTask>
+			<command>clone</command>
+			<postCommandTaskEntries>
+				<postCommandTaskEntry>
+					<commandLine>git config branch.master.rebase true</commandLine>
+				</postCommandTaskEntry>
+			</postCommandTaskEntries>
+		</postCommandTask>
+		<postCommandTask>
+			<command>branch</command>
+			<postCommandTaskEntries>
+				<postCommandTaskEntry>
+					<commandLine>git status</commandLine>
+				</postCommandTaskEntry>
+				<postCommandTaskEntry>
+					<commandLine>git log -1</commandLine>
+				</postCommandTaskEntry>
+			</postCommandTaskEntries>
+		</postCommandTask>
+	</postCommandTasks>
+
+
+	<manifestEntries>
+
+		<entry>
+			<repository>local</repository>
+			<targetName>local</targetName>
+		</entry>
+	</manifestEntries>
+
+</manifest>

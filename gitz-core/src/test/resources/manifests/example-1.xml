@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+	Example manifest file for gitz. See the model for details
+-->
+
+<manifest>
+
+	<baseFolder>/temp/</baseFolder>
+	<description>Manifest to use two git support projects.</description>
+
+	<defaultServerPath>https://github.com/</defaultServerPath>
+
+	<postCommandTasks>
+		<postCommandTask>
+			<command>clone</command>
+			<postCommandTaskEntries>
+				<postCommandTaskEntry>
+					<commandLine>git config branch.master.rebase true</commandLine>
+				</postCommandTaskEntry>
+			</postCommandTaskEntries>
+		</postCommandTask>
+	</postCommandTasks>
+
+
+	<manifestEntries>
+
+		<entry>
+			<repository>blynn/gitmagic</repository>
+			<targetName>git-magic</targetName>
+		</entry>
+		<entry>
+			<repository>rogerdudler/git-guide</repository>
+			<targetName>git-guide</targetName>
+
+		</entry>
+
+	</manifestEntries>
+
+</manifest>

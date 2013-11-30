@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+	Example manifest file for gitz. See the model for details
+-->
+
+<manifest>
+
+	<baseFolder>/temp/work/</baseFolder>
+	<description>Manifest for local and scruffy</description>
+
+	<defaultServerPath>/temp/work/server</defaultServerPath>
+
+	<postCommandTasks/>
+
+	<manifestEntries>
+		<entry>
+			<repository>local</repository>
+			<targetName>local</targetName>
+		</entry>
+		<entry>
+			<repository>scruffy</repository>
+			<targetName>scruffy</targetName>
+		</entry>
+	</manifestEntries>
+
+</manifest>

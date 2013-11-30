@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+	Example manifest file for gitz. See the model for details
+-->
+
+<manifest>
+
+	<baseFolder>\temp</baseFolder>
+	<description>Manifest to use two git support projects. (no command tasks or targets)</description>
+
+	<defaultServerPath>https://github.com/</defaultServerPath>
+
+	<postCommandTasks/>
+
+	<manifestEntries>
+
+		<entry>
+			<repository>blynn/gitmagic</repository>
+		</entry>
+		<entry>
+			<repository>rogerdudler/git-guide</repository>
+		</entry>
+
+	</manifestEntries>
+
+</manifest>
